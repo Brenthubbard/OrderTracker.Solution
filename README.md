@@ -38,8 +38,8 @@ For contact support, please email Brent Hubbard @ hubbardbrent@hotmail.com
 - MS Build
 - CSS
 - ASP.NET MVC
-- .NET 5
-- C# 9
+- .NET 
+- C# 
 
 
 
