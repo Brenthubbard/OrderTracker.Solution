@@ -1,0 +1,24 @@
+
+@{
+  Layout = "_Layout";
+}
+<h1>Add a new Vendor info to @Model.Name</h1>
+
+<form action="/vendors/@Model.Id/orders" method="post">
+  <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id">
+
+  <label for="itemDescription">Item Description</label>
+  <input id="itemDescription" name="itemDescription" type="text">
+
+  <label for="itemDescription">Item Description</label>
+  <input id="itemDescription" name="itemDescription" type="text">
+
+  <label for="itemDescription">Item Description</label>
+  <input id="itemDescription" name="itemDescription" type="text">
+  
+  <label for="itemDescription">Item Description</label>
+  <input id="itemDescription" name="itemDescription" type="text">
+
+  
+  <button type='submit'>Add Item</button>
+</form>
