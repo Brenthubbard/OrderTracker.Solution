@@ -22,19 +22,19 @@ namespace OrderTracker.Tests
 
 
 
-//     [TestMethod]
-//     public void GetDescription_ReturnsDescription_String()
-//     {
-//       //Arrange
-//       string description = "Walk the dog.";
-//       Item newItem = new Item(description);
+    [TestMethod]
+    public void GetOrderName_ReturnsOrderName_String()
+    {
+      //Arrange
+      string orderName = "Order One";
+      Order newOrder = new Order(orderName, "xxx", "xxx", "xxx");
 
-//       //Act
-//       string result = newItem.Description;
+      //Act
+      string result = newOrder.OrderName;
 
-//       //Assert
-//       Assert.AreEqual(description, result);
-//     }
+      //Assert
+      Assert.AreEqual(VendorName, result);
+    }
 
 //     [TestMethod]
 //     public void SetDescription_SetDescription_String()
