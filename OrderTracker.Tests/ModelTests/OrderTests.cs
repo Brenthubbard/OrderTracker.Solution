@@ -10,14 +10,18 @@ namespace OrderTracker.Tests
   {
     public void Dispose()
     {
-    Item.ClearAll();
+    Order.ClearAll();
     }
     [TestMethod]
-    public void ItemConstructor_CreatesInstanceOfItem_Item()
+    public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Item newItem = new Item("test");
-      Assert.AreEqual(typeof(Item), newItem.GetType());
+      Order newOrder = new Order("test", "test2", "test3", "test4");
+      Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
+    // C:\users\hubba\desktop\OrderTracker.Solution\OrderTracker.Tests\ModelTests\OrderTests.cs(18,28): error CS7036: There is no argument given that corresponds to the required formal parameter 'description' of 'Order.Order(string, string, string, string)' [C: \users\hubba\desktop\OrderTracker.Solution\OrderTracker.Tests\OrderTracker.Test.csproj]
+
+
+
 //     [TestMethod]
 //     public void GetDescription_ReturnsDescription_String()
 //     {

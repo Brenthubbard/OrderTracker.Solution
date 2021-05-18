@@ -2,9 +2,9 @@ using System.Collections.Generic;
 
 namespace OrderTracker.Models
 {
-  public class Category
+  public class Vendor
   {
-    public static List<Vendor> _instances = new List<Vendor> { };
+    private static List<Vendor> _instances = new List<Vendor> { };
     public string Name { get; set; }
     public string Description { get; set; }
     public int Id { get; }
@@ -17,10 +17,6 @@ namespace OrderTracker.Models
       Id = _instances.Count;
       Orders = new List<Order> { };
     }
-    public static void ClearAll()
-    {
-      _instances.Clear();
-    }
     public static List<Vendor> GetAll()
     {
       return _instances;
@@ -31,7 +27,11 @@ namespace OrderTracker.Models
     }
     public void AddOrder(Order order)
     {
-      Order.Add(order);
+      Orders.Add(order);
+    }
+    public static void ClearAll()
+    {
+      _instances.Clear();
     }
   }
 }
