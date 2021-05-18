@@ -33,7 +33,7 @@ namespace OrderTracker.Tests
       string result = newOrder.OrderName;
 
       //Assert
-      Assert.AreEqual(VendorName, result);
+      Assert.AreEqual(orderName, result);
     }
 
 //     [TestMethod]
