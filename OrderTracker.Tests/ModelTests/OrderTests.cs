@@ -36,21 +36,19 @@ namespace OrderTracker.Tests
       Assert.AreEqual(orderName, result);
     }
 
-//     [TestMethod]
-//     public void SetDescription_SetDescription_String()
-//     {
-//       //Arrange
-//       string description = "Walk the dog.";
-//       Item newItem = new Item(description);
+    [TestMethod]
+    public void SetDescription_ReturnADescription_String()
+    {
+      //Arrange
+      string description = "description";
+      Order newOrder = new Order( "xxx", "description", "xxx", "xxx");
 
-//       //Act
-//       string updatedDescription = "Do the Dishes";
-//       newItem.Description = updatedDescription;
-//       string result = newItem.Description;
+      //Act
+      string result = newOrder.Description;
 
-//       //Assert
-//       Assert.AreEqual(updatedDescription, result);
-//     }
+      //Assert
+      Assert.AreEqual(descriptions, result);
+    }
 //     [TestMethod]
 //     public void GetAll_ReturnsEmptyList_ItemList()
 //     {
