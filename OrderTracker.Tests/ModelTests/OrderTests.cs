@@ -47,7 +47,7 @@ namespace OrderTracker.Tests
       string result = newOrder.Description;
 
       //Assert
-      Assert.AreEqual(descriptions, result);
+      Assert.AreEqual(description, result);
     }
 //     [TestMethod]
 //     public void GetAll_ReturnsEmptyList_ItemList()
