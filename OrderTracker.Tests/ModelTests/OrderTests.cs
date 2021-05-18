@@ -87,7 +87,7 @@ namespace OrderTracker.Tests
       Order order2 = new Order("xxx", description, "xxx", "xxx");
       Order order3 = new Order("xxx", "xxx", price, "xxx");
       Order order4 = new Order("xxx", "xxx", "xxx", date);
-      List<Order> newList = new List<Order> { order2, order3, order4 };
+      List<Order> newList = new List<Order> { order1, order2, order3, order4 };
       //Act
       List<Order> result = Order.GetAll();
       //Assert
