@@ -73,7 +73,7 @@ namespace OrderTracker.Tests
       string result = newOrder.Date;
 
       //Assert
-      Assert.AreEqual(dates, result);
+      Assert.AreEqual(date, result);
     }
     // [TestMethod]
     // public void GetPrice_ReturnsPrice_String()
