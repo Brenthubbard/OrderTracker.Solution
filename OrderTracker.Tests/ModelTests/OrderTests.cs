@@ -62,19 +62,19 @@ namespace OrderTracker.Tests
       //Assert
       Assert.AreEqual(price, result);
     }
-    // [TestMethod]
-    // public void SetDescription_ReturnADescription_String()
-    // {
-    //   //Arrange
-    //   string description = "description";
-    //   Order newOrder = new Order( "xxx", "description", "xxx", "xxx");
+    [TestMethod]
+    public void SetDate_ReturnDate_String()
+    {
+      //Arrange
+      string date = "date";
+      Order newOrder = new Order( "xxx", "xxx", "xxx", "date");
 
-    //   //Act
-    //   string result = newOrder.Description;
+      //Act
+      string result = newOrder.Date;
 
-    //   //Assert
-    //   Assert.AreEqual(description, result);
-    // }
+      //Assert
+      Assert.AreEqual(dates, result);
+    }
     // [TestMethod]
     // public void GetPrice_ReturnsPrice_String()
     // {
