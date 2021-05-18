@@ -60,7 +60,7 @@ namespace OrderTracker.Tests
       string result = newOrder.Price;
 
       //Assert
-      Assert.AreEqual(prices, result);
+      Assert.AreEqual(price, result);
     }
     // [TestMethod]
     // public void SetDescription_ReturnADescription_String()
