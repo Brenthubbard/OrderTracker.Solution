@@ -49,19 +49,47 @@ namespace OrderTracker.Tests
       //Assert
       Assert.AreEqual(description, result);
     }
-//     [TestMethod]
-//     public void GetAll_ReturnsEmptyList_ItemList()
-//     {
-//       //Arrange
-//       List<Item> newList = new List<Item>{ };
+    [TestMethod]
+    public void SetPrice_ReturnPrice_String()
+    {
+      //Arrange
+      string price = "price";
+      Order newOrder = new Order( "xxx", "xxx", "price", "xxx");
 
-//       //Act
-//       List<Item> result = Item.GetAll();
+      //Act
+      string result = newOrder.Price;
+
+      //Assert
+      Assert.AreEqual(prices, result);
+    }
+    // [TestMethod]
+    // public void SetDescription_ReturnADescription_String()
+    // {
+    //   //Arrange
+    //   string description = "description";
+    //   Order newOrder = new Order( "xxx", "description", "xxx", "xxx");
+
+    //   //Act
+    //   string result = newOrder.Description;
+
+    //   //Assert
+    //   Assert.AreEqual(description, result);
+    // }
+    // [TestMethod]
+    // public void GetPrice_ReturnsPrice_String()
+    // {
+    //   //Arrange
+    //   List<Item> newList = new List<Item>{ };
+
+    //   //Act
+    //   List<Item> result = Item.GetAll();
 
 
-//       //Assert
-//       CollectionAssert.AreEqual(newList, result);
-//     }
+    //   //Assert
+    //   CollectionAssert.AreEqual(newList, result);
+    // }
+
+
 //     [TestMethod]
 //     public void GetAll_ReturnItems_ItemList()
 //     {
