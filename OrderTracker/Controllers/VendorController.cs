@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using OrderTracker.Models;
-// using System;
 
 namespace OrderTracker.Controllers
 {
@@ -38,17 +37,17 @@ namespace OrderTracker.Controllers
       return RedirectToAction("Index");
     }
     // This one creates new Orders within a given Vendor, not new Vendors:
-    // [HttpPost("/vendors/{vendorId}/orders")]
-    // public ActionResult Create(int vendorId, string orderName, string orderDescription, string orderPrice, string orderDate)
-    // {
-    //   Dictionary<string, object> model = new Dictionary<string, object>();
-    //   Vendor foundVendor = Vendor.Find(vendorId);
-    //   Order newOrder = new Order(orderName, orderDescription, orderPrice, orderDate);
-    //   foundVendor.AddOrder(newOrder);
-    //   List<Order> vendorOrder = foundVendor.Orders;
-    //   model.Add("order", vendorOrder);
-    //   model.Add("vendor", foundVendor);
-    //   return View("Show", model);
-    // }
+    [HttpPost("/vendors/{vendorId}/orders")]
+    public ActionResult Create(int vendorId, string orderName, string orderDescription, string orderPrice, string orderDate)
+    {
+      Dictionary<string, object> model = new Dictionary<string, object>();
+      Vendor foundVendor = Vendor.Find(vendorId);
+      Order newOrder = new Order(orderName, orderDescription, orderPrice, orderDate);
+      foundVendor.AddOrder(newOrder);
+      List<Order> vendorOrder = foundVendor.Orders;
+      model.Add("order", vendorOrder);
+      model.Add("vendor", foundVendor);
+      return View("Show", model);
+    }
   }
 }
