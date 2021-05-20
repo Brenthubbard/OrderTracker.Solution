@@ -20,80 +20,91 @@ namespace OrderTracker.Tests
       Vendor newVendor = new Vendor("test Vendor", "description");
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
-    // [TestMethod]
-    // public void GetName_ReturnsName_String()
-    // {
-    //   //Arrange
-    //   string name = "Test Category";
-    //   Category newCategory = new Category(name);
+    [TestMethod]
+    public void GetNameReturnsName_String()
+    {
+      //Arrange
+      string name= "Name";
+      Vendor newVendor = new Vendor(name, "xxx");
+      //Act
+      string result = newVendor.Name;
 
-    //   //Act
-    //   string result = newCategory.Name;
+      //Assert
+      Assert.AreEqual(name, result);
+    }
+    [TestMethod]
+    public void GetDescription_ReturnsDescription_String()
+    {
+      //Arrange
+      string description = "Description";
+      Vendor newVendor = new Vendor("xxx", description);
+      //Act
+      string result = newVendor.Description;
 
-    //   //Assert
-    //   Assert.AreEqual(name, result);
-    // }
-    // [TestMethod]
-    // public void GetId_ReturnsCategoryId_Int()
-    // {
-    //   //Arrange
-    //   string name = "Test Category";
-    //   Category newCategory = new Category(name);
+      //Assert
+      Assert.AreEqual(description, result);
+    }
+    [TestMethod]
+    public void GetId_ReturnsVendorId_Int()
+    {
+      //Arrange
+      string vendor= "Test Vendor";
+      Vendor newVendor = new Vendor(vendor, "xxx");
 
-    //   //Act
-    //   int result = newCategory.Id;
+      //Act
+      int result = newVendor.Id;
 
-    //   //Assert
-    //   Assert.AreEqual(1, result);
-    // }
+      //Assert
+      Assert.AreEqual(1, result);
+    }
 
-    // [TestMethod]
-    // public void GetAll_ReturnsAllCategoryObjects_CategoryList()
-    // {
-    //   //Arrange
-    //   string name01 = "Work";
-    //   string name02 = "School";
-    //   Category newCategory1 = new Category(name01);
-    //   Category newCategory2 = new Category(name02);
-    //   List<Category> newList = new List<Category> { newCategory1, newCategory2 };
+    [TestMethod]
+    public void GetAll_ReturnsAllVendorObjects_VendorList()
+    {
+      //Arrange
+      string vendor1 = "Vendor1";
+      string vendor2 = "Vendor2";
+      Vendor newVendor1 = new Vendor(vendor1, "xxx");
+      Vendor newVendor2 = new Vendor(vendor2, "xxx");
+      List<Vendor> newList = new List<Vendor> { newVendor1, newVendor2 };
 
-    //   //Act
-    //   List<Category> result = Category.GetAll();
+      //Act
+      List<Vendor> result = Vendor.GetAll();
 
-    //   //Assert
-    //   CollectionAssert.AreEqual(newList, result);
-    // }
-    // [TestMethod]
-    // public void Find_ReturnsCorrectCategory_Category()
-    // {
-    //   //Arrange
-    //   string name01 = "Work";
-    //   string name02 = "School";
-    //   Category newCategory1 = new Category(name01);
-    //   Category newCategory2 = new Category(name02);
+      //Assert
+      CollectionAssert.AreEqual(newList, result);
+    }
+    [TestMethod]
+    public void Find_ReturnsVendor_Vendor()
+    {
+      //Arrange
+      string vendor1 = "Vendor1";
+      string vendor2 = "Vendor";
+      Vendor newvendor1 = new Vendor(vendor1, "xxx");
+      Vendor newvendor2 = new Vendor(vendor2, "xxx");
 
-    //   //Act
-    //   Category result = Category.Find(2);
+      //Act
+      Vendor result = Vendor.Find(1);
 
-    //   //Assert
-    //   Assert.AreEqual(newCategory2, result);
-    // }
-    // [TestMethod]
-    // public void AddItem_AssociatesItemWithCategory_ItemList()
-    // {
-    //   //Arrange
-    //   string description = "Walk the dog.";
-    //   Item newItem = new Item(description);
-    //   List<Item> newList = new List<Item> { newItem };
-    //   string name = "Work";
-    //   Category newCategory = new Category(name);
-    //   newCategory.AddItem(newItem);
+      //Assert
+      Assert.AreEqual(newvendor1, result);
+    }
+    [TestMethod]
+    public void AddOrder_AssociatesOrderWithvendor_OrderList()
+    {
+      //Arrange
+      string description = "xxx";
+      Order newOrder = new Order(description, "xxx", "xxx", "xxx");
+      List<Order> newList = new List<Order> { newOrder };
+      string name= "xxx";
+      Vendor newVendor = new Vendor(name, "xxx");
+      newVendor.AddOrder(newOrder);
 
-    //   //Act
-    //   List<Item> result = newCategory.Items;
+      //Act
+      List<Order> result = newVendor.Orders;
 
-    //   //Assert
-    //   CollectionAssert.AreEqual(newList, result);
-    // }
+      //Assert
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }

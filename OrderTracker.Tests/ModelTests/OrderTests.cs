@@ -38,7 +38,7 @@ namespace OrderTracker.Tests
     {
       //Arrange
       string description = "description";
-      Order newOrder = new Order("xxx", "description", "xxx", "xxx");
+      Order newOrder = new Order("xxx", description, "xxx", "xxx");
 
       //Act
       string result = newOrder.Description;
@@ -51,7 +51,7 @@ namespace OrderTracker.Tests
     {
       //Arrange
       string price = "price";
-      Order newOrder = new Order("xxx", "xxx", "price", "xxx");
+      Order newOrder = new Order("xxx", "xxx", price, "xxx");
 
       //Act
       string result = newOrder.Price;
@@ -64,7 +64,7 @@ namespace OrderTracker.Tests
     {
       //Arrange
       string date = "date";
-      Order newOrder = new Order("xxx", "xxx", "xxx", "date");
+      Order newOrder = new Order("xxx", "xxx", "xxx", date);
 
       //Act
       string result = newOrder.Date;
